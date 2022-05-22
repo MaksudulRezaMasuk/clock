@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CLOCK</title>
+		<link rel="stylesheet" type="text/css" href="masuk.css"/>
+	 	<style>
+		
+.clocks{
+	color:red;
+	font-size:50px;
+	font-family:arial black;
+	
+	background:yellow;
+	border:20px ridge red;
+	font-style:italic;
+	padding:20px;
+	padding-right:40px;
+	border-color:lime green  lime green ;
+	border-radius:15px;
+	text-shadow:2px 2px 2px black;
+	width:250px;
+}
+
+.not{
+	color:gray;	
+}
+.demo{
+	margin: 15%  40%;
+}
+
+		</style>
+	</head>				
+<body>
+
+<div class="demo">
+	<div class="clocks">
+		<center><span id="hour"></span><span class="not">:</span><span id="minute"></span><span class="not">:</span><span id="second"></span></center>
+	</div>
+
+	<div>
+		<span id="hour"></span>
+		<span id="minute"></span>
+		<span id="second"></span>
+	</div>
+</div>
+
+	<script type="text/javascript">
+		
+		function clock(){
+			var date =  new Date();
+			var hour= date.getHours();
+			var minute= date.getMinutes();
+			var second= date.getSeconds();
+			document.getElementById('hour').innerHTML=hour;
+			document.getElementById('minute').innerHTML=minute;
+			document.getElementById('second').innerHTML=second;
+		}
+		setInterval(clock,1000);
+	</script>
+</body>
+</html>
